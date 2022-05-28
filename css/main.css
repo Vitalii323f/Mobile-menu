@@ -161,10 +161,11 @@ body {
   /* Убираем нижнее подчеркивание ссылок*/
 }
 
-.header__logo {
-  margin-right: 93px;
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
-
 .logo__text--black {
   color: var(--title-text-color);
 }
@@ -256,6 +257,31 @@ body {
 
 .button-item:not(:last-child) {
   margin-right: 8px;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button .is-open .icon-cross {
+  display: block;
+}
+
+.menu-button .is-open .menu-button {
+  display: none;
 }
 
 /*.button-list {
@@ -888,11 +914,6 @@ body {
   align-items: center;
 }
 
-/*Создаем Flex контейнер Header*/
-/*.header .container {
-  display: flex;
-  align-items: center;
-}*/
 .site-nav {
   display: flex;
 }
